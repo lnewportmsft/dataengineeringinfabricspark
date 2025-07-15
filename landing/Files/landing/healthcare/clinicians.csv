@@ -1,0 +1,5 @@
+clinician_id,clinician_name,clinician_role,session_inactivity_minutes
+101,"Dr. Alice Smith",Physician,30
+102,"Bob Jones RN",Nurse,20
+103,"Charlie Davis",Admin,45
+104,"Dr. Priya Patel",Physician,30

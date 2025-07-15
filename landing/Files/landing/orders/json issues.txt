@@ -1,0 +1,7 @@
+Highlights of this data:
+
+    Nesting: customer, address, items, shipping_details.
+    Arrays: tags, items.
+    Optional Fields: middle_name (record 2), discount in items (record 3), tracking_no missing in shipping_details (record 4).
+    Null Objects/Empty Arrays: shipping_details (record 2), tags (record 2), items (record 4).
+    Mixed Types (Potentially): customer_id is numeric (123, 456) and string ("CUST-789"). Spark might infer string for the column.

@@ -1,0 +1,5 @@
+patient_id,first_name,last_name,dob,street_address,city,state,zip_code,primary_care_provider_id
+1001,Alice,Wonder,1985-05-15,999 New St,Anytown,CA,90212,501
+1002,Bob,Xavier,1992-11-20,456 Oak Ave,Otherville,NY,10001,503
+1004,Diana,Zane,2001-07-30,321 Elm St,Sometown,FL,33101,502
+1003,Charlie,Young,1978-02-10,789 Pine Rd,Anytown,CA,90211,501

@@ -1,0 +1,14 @@
+record_id,source_system,mrn,first_name,last_name,middle_name,dob,street_address,city,state,zip_code,phone_number
+REC001,EMR,EMR1001,John,Smith,,1980-05-20,123 Main St,Anytown,CA,90210,555-123-4567
+REC002,Billing,B905,Jon,Smith,,1980-05-20,123 Main St,Anytown,CA,90210,555-123-4567
+REC003,Portal,PXYZ01,John,Smyth,T,1980-05-20,123 Main Street,Anytown,CA,90210,1-555-123-4567
+REC004,EMR,EMR1001B,Jonathan,Smith,,1980-05-20,123 Main St Apt 1,Anytown,CA,90210,(555) 123-4567
+REC005,Referral,REF555,Alice,Wonder,V,1995-11-15,456 Oak Ave,Otherville,NY,10001,555-987-6543
+REC006,EMR,EMR2005,Alice,Wonder,,1995-11-15,456 Oak Avenue,Otherville,NY,10001,555-987-6543
+REC007,Billing,B112,Alice,Wonder,V,1995-11-15,456 Oak Ave #2,Otherville,NY,10001,555-987-6543
+REC008,EMR,EMR3010,Robert,Jones,,1975-02-28,789 Pine Rd,Anytown,CA,90211,555-111-2222
+REC009,Portal,PABC99,Bob,Jones,J,1975-02-28,789 Pine Road,Anytown,CA,90211,555-111-2222
+REC010,Billing,B777,Robert,Jones,Jr,1975-02-28,789 Pine Rd,Anytown,CA,90211,555 111 2222
+REC011,EMR,EMR4001,Priya,Patel,,1990-08-01,10 Downing St,London,UK,SW1A 2AA,555-333-4444
+REC012,Billing,B888,Charlie,Young,,1988-12-25,1600 Amphitheatre Pkwy,Mountain View,CA,94043,555-555-5555
+REC013,EMR,EMR1001C,Jonn,Smith,,1980-05-20,123 Main St,Anytown,CA,90210,555-123-4567

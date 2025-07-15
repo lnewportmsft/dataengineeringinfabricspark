@@ -1,0 +1,4 @@
+patient_id,first_name,last_name,dob,street_address,city,state,zip_code,primary_care_provider_id,is_current,effective_date,end_date
+1001,Alice,Wonder,1985-05-15,123 Main St,Anytown,CA,90210,501,TRUE,2025-01-01,
+1002,Bob,Xavier,1992-11-20,456 Oak Ave,Otherville,NY,10001,502,TRUE,2025-01-01,
+1003,Charlie,Young,1978-02-10,789 Pine Rd,Anytown,CA,90211,501,TRUE,2025-01-01,

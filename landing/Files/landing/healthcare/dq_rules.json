@@ -1,0 +1,8 @@
+[
+  {"rule_id": "DQ001", "column_name": "patient_id", "check_type": "notNull", "is_active": true, "description": "Patient ID must not be null"},
+  {"rule_id": "DQ002", "column_name": "encounter_date", "check_type": "notFutureDate", "is_active": true, "description": "Encounter date cannot be in the future"},
+  {"rule_id": "DQ003", "column_name": "primary_diagnosis_code", "check_type": "regexMatch", "pattern": "^[A-Z][0-9]{2}(\\.[A-Z0-9]{1,4})?$", "is_active": true, "description": "Primary Diagnosis Code must be valid ICD-10 format (approx.)"},
+  {"rule_id": "DQ004", "column_name": "visit_type", "check_type": "valueInSet", "allowed_values": ["Office", "Telehealth", "Inpatient", "Emergency"], "is_active": true, "description": "Visit Type must be one of the allowed values"},
+  {"rule_id": "DQ005", "column_name": "billable_amount", "check_type": "valueInRange", "min_value": 0.0, "max_value": 100000.0, "is_active": true, "description": "Billable amount must be between 0 and 100,000"},
+  {"rule_id": "DQ006", "column_name": "quality_metric_score", "check_type": "valueInRange", "min_value": 0, "max_value": 100, "is_active": true, "description": "Quality score must be between 0 and 100 (if present)"}
+]

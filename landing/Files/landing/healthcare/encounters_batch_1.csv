@@ -1,0 +1,8 @@
+encounter_id,patient_id,provider_id,encounter_date,primary_diagnosis_code,visit_type,billable_amount
+ENC001,1001,501,2025-01-15,S62.001A,Office,150.75
+ENC002,1002,502,2025-01-16,J45.909,Telehealth,75.00
+ENC003,1003,501,2025-01-17,M54.5,Office,165.50
+ENC004,1001,501,2025-01-20,Z00.00,Office,120.00
+ENC005,1004,502,2025-01-21,R05,Emergency,550.25
+ENC006,,503,2025-01-22,K21.9,Inpatient,1200.00
+ENC007,1002,502,2025-10-10,I10,Office,95.00

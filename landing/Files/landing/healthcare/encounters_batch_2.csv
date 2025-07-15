@@ -1,0 +1,8 @@
+encounter_id,patient_id,provider_id,encounter_date,primary_diagnosis_code,visit_type,billable_amount,quality_metric_score
+ENC008,1005,503,2025-02-01,F32.9,Office,140.00,85
+ENC009,1001,501,2025-02-05,S62.001A,Office,155.50,92
+ENC010,1003,501,2025-02-10,INVALID-CODE,Office,130.00,78
+ENC011,1002,502,2025-02-12,J45.909,Clinic,80.00,88
+ENC012,1004,502,2025-02-15,R05,Emergency,-50.00,95
+ENC013,1005,503,2025-02-20,F32.9,Office,145.00,105
+ENC014,1001,501,2025-02-22,Z00.00,Office,125.00,
