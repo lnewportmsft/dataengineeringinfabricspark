@@ -10,62 +10,6 @@
     * **Selective Flattening & Struct Navigation:** Instead of full flattening, use PySpark to read the JSON (inferring schema or providing a robust one). Employ `select()` with complex path expressions (`col("address.city")`, `col("orders[0].item_id")`) and functions like `explode()` (for arrays), `element_at()` (for specific array elements or map values), and `getField()` to extract *only* the necessary top-level and specific nested fields into a structured DataFrame. Keep other less-used nested parts as `StructType` columns.
 * **Demo Focus:** Read complex `JSON` from `OneLake`/`Lakehouse` -> Apply selective flattening/struct navigation -> Show querying the resulting DataFrame with a mix of flat columns and accessible structs -> Optionally show a `Pandas UDF` tackling a particularly messy part -> Write results to a `Delta Lake` table, queryable via the `SQL endpoint`.
 
-graph TD
-    Start[Notebook Start] --> MD1[MD: Problem & Technique Description]
-    MD1 --> MD2[MD: Reset Demo]
-    MD2 --> MD3[MD: Configure Command Note]
-    MD3 --> Code1[Code: %%configure Default Lakehouse]
-    Code1 --> Code2[Code: %%sql DROP TABLE orders_processed]
-    Code2 --> MD4[MD: Cell 1 - Setup & Imports]
-    MD4 --> Code3[Code: Imports, File Paths]
-    Code3 --> MD5[MD: Data Highlights]
-    MD5 --> MD6[MD: Cell 2 - Read JSON & Inspect Schema]
-    MD6 --> Code4[Code: Read JSON, Print Schema & Show]
-    Code4 --> MD7[MD: Discussion Point - Schema]
-    MD7 --> MD8[MD: Cell 3 - Selective Flattening]
-    MD8 --> Code5[Code: Process DF with Select & Explode]
-    Code5 --> MD9[MD: Discussion Point - Flattening]
-    MD9 --> MD10[MD: Cell 4 (Optional) - Alternative Array Handling]
-    MD10 --> Code6[Code: Alternative DF without Explode]
-    Code6 --> MD11[MD: Cell 5 - Write to Delta Lake]
-    MD11 --> Code7[Code: Write Processed DF to Delta Table]
-    Code7 --> MD12[MD: Discussion Point - Delta Benefits]
-    MD12 --> MD13[MD: Cell 6 - Query via SQL]
-    MD13 --> Code8[Code: %%sql SELECT Query on Processed Table]
-    Code8 --> MD14[MD: Discussion Point - SQL Querying]
-    MD14 --> End[Notebook End]
-
-    subgraph "Main Demo Flow"
-        MD4 --> Code3 --> MD6 --> Code4 --> MD8 --> Code5 --> MD11 --> Code7 --> MD13 --> Code8
-    end
-
-    subgraph "Optional/Alternative"
-        MD10 --> Code6
-    end
-
-    style MD1 fill:#f9f,stroke:#333
-    style MD2 fill:#f9f,stroke:#333
-    style MD3 fill:#f9f,stroke:#333
-    style MD4 fill:#f9f,stroke:#333
-    style MD5 fill:#f9f,stroke:#333
-    style MD6 fill:#f9f,stroke:#333
-    style MD7 fill:#f9f,stroke:#333
-    style MD8 fill:#f9f,stroke:#333
-    style MD9 fill:#f9f,stroke:#333
-    style MD10 fill:#f9f,stroke:#333
-    style MD11 fill:#f9f,stroke:#333
-    style MD12 fill:#f9f,stroke:#333
-    style MD13 fill:#f9f,stroke:#333
-    style MD14 fill:#f9f,stroke:#333
-    style Code1 fill:#bbf,stroke:#333
-    style Code2 fill:#bbf,stroke:#333
-    style Code3 fill:#bbf,stroke:#333
-    style Code4 fill:#bbf,stroke:#333
-    style Code5 fill:#bbf,stroke:#333
-    style Code6 fill:#bbf,stroke:#333
-    style Code7 fill:#bbf,stroke:#333
-    style Code8 fill:#bbf,stroke:#333
-
 ## 2. Large-Scale User Sessionization with Variable Inactivity Windows
 
 * **Problem:** Grouping raw event logs (clicks, views) into user sessions based on inactivity (e.g., 30 mins) is standard, but doing it efficiently over billions of events and potentially allowing *different* inactivity thresholds per user type or activity type adds complexity.
